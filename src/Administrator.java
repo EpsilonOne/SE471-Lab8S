@@ -7,7 +7,7 @@ public class Administrator extends Employee {
 
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
-        }
+    }
         
 
     @Override

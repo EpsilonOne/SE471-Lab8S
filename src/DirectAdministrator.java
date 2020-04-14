@@ -1,12 +1,13 @@
 public class DirectAdministrator extends Administrator {
 
-    public Employee overseer;
+    protected Administrator overseer;
 
-    public void getFeedback(){
-
+    public Boolean getFeedback(){
+        return true;
     }
 
-    public void seeDanger(HReporter_IF r, Hazard h){
+    @Override
+    public void seeDanger(HReporter_IF r, Hazard h) {
         System.out.println(name + " Got it!");
         for(Employee member:members){
             if(member != r)
