@@ -1,4 +1,4 @@
-public class Employee implements HReporter_IF {
+public abstract class Employee implements HReporter_IF {
 
     private String name;
     private Administrator overseer;
@@ -15,10 +15,11 @@ public class Employee implements HReporter_IF {
     @Override
     public void setDirectOverseer(HReporter_IF r) {
 
+
     }
 
     @Override
     public HReporter_IF getDirectOverseer() {
-        return null;
+        return overseer;
     }
 }
