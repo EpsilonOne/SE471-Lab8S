@@ -16,6 +16,6 @@ public abstract class Administrator extends Employee {
         for(Employee member:members){
             member.evacuate();
         }
-        this.evacuate();
+        System.out.println("The employee " + this.name + " is evacuating.");
     }
 }

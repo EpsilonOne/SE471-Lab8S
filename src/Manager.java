@@ -2,16 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Manager extends Administrator {
-    public List<Decision> ds;
-
     public Manager(String name){
         this.name = name;
         this.overseer = null;
         this.members = new ArrayList<Employee>();
-        this.ds = new ArrayList<Decision>();
     }
 
     public List<Decision> suggestDecision(Hazard h){
+        List<Decision> ds = new ArrayList<Decision>();
+
         for(Employee member:members){
 
         }
