@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Administrator extends Employee {
+public abstract class Administrator extends Employee {
 
-    public List<Employee> members;
+    List<Employee> members;
 
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
+
     }
         
 

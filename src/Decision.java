@@ -1,8 +1,8 @@
-public class Decision {
+public abstract class Decision {
 
-    private Manager suggestedBy;
-    private int priority;
-    private Hazard hazard;
+    Manager suggestedBy;
+    int priority;
+    Hazard hazard;
 
     public void execute(CEO commander){
 

@@ -12,10 +12,10 @@ public class RegularEmployee extends Employee {
 
     @Override
     public void evacuate() {
-
+        //this.evacuate();???? recursive?
     }
 
     public void fixIt(){
-
+        System.out.println("The employee " + this.name + " is fixing it.");
     }
 }

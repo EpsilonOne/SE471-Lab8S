@@ -1,8 +1,8 @@
 public class DirectAdministrator extends Administrator {
 
-    protected Administrator overseer;
-
     public Boolean getFeedback(){
+        System.out.println("Feedback by " + this.name + ".");
+        //Do I need to report?? For now, yes...
         return true;
     }
 

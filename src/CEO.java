@@ -9,7 +9,9 @@ public class CEO extends Administrator {
             Manager m = (Manager)e;
             decisions.add((Decision)m.suggestDecision(h));
         }
+        implementDecision(decisions);
     }
+
     public void implementDecision(List<Decision> ds){
         ds = sortByPriority(ds);
         Decision d = ds.get(0);
@@ -21,7 +23,6 @@ public class CEO extends Administrator {
 
     private List<Decision> sortByPriority(List<Decision> ds){
         return ds;
-
     }
 
     public void report(){
