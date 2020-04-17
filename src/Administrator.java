@@ -5,11 +5,11 @@ public abstract class Administrator extends Employee {
 
     List<Employee> members;
 
+
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
 
     }
-        
 
     @Override
     public void evacuate() {
@@ -17,5 +17,10 @@ public abstract class Administrator extends Employee {
             member.evacuate();
         }
         System.out.println("The employee " + this.name + " is evacuating.");
+
+    }
+
+    public void setMember(Employee e){
+        members.add(e);
     }
 }

@@ -1,12 +1,19 @@
 public class RegularEmployee extends Employee {
 
+    public RegularEmployee(String e) {
+        super();
+        this.overseer = null;
+        this.name = e;
+    }
+
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
         if(r != null)
             fixIt();
         else{
+            System.out.println(name + " has found a " + h.getType() + " reporting to supervisor: "+overseer.name);
             fixIt();
-            overseer.seeDanger(this, new Hazard());
+            overseer.seeDanger(this, h);
         }
     }
 

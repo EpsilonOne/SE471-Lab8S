@@ -2,7 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Manager extends Administrator {
+
+
     public Manager(String name){
+        super();
         this.name = name;
         this.overseer = null;
         this.members = new ArrayList<Employee>();
@@ -19,7 +22,7 @@ public class Manager extends Administrator {
 
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
-        Boolean reportToCEO = true;
+        boolean reportToCEO = true;
         for(Employee member:members){
             DirectAdministrator d = (DirectAdministrator)member;
             if(d.getFeedback() == false)

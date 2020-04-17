@@ -1,4 +1,7 @@
-public class DirectAdministrator extends Administrator {
+import java.util.ArrayList;
+
+public abstract class DirectAdministrator extends Administrator {
+
 
     public Boolean getFeedback(){
         System.out.println("Feedback by " + this.name + ".");

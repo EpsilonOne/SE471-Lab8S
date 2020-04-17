@@ -1,7 +1,7 @@
 public abstract class Employee implements HReporter_IF {
 
-    String name;
-    Administrator overseer;
+    protected String name;
+    protected Administrator overseer;
 
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
@@ -9,12 +9,14 @@ public abstract class Employee implements HReporter_IF {
     }
 
     public void evacuate(){
+        System.out.println("The Employee "+this.name+" is evacuating");
 
     }
 
     @Override
     public void setDirectOverseer(HReporter_IF r) {
         overseer = (Administrator)r;
+        overseer.members.add(this);
     }
 
     @Override
