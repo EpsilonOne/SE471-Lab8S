@@ -14,20 +14,26 @@ public class CEO extends Administrator {
         List<Decision> decisions = new ArrayList<Decision>();
         for(Employee e: members){
             Manager m = (Manager)e;
-            decisions.add((Decision) m.suggestDecision(h));
+            decisions.addAll(m.suggestDecision(h));
         }
+
+        for(Decision temp: decisions) {
+            System.out.println(temp);
+        }
+
         implementDecision(decisions);
     }
 
     public void implementDecision(List<Decision> ds){
-        ds = sortByPriority(ds);
-        Decision d = ds.get(0);
-        System.out.println(ds.get(0));
-        d.execute(this);
+        if(ds.size() != 0) {
+            ds = sortByPriority(ds);
+            Decision d = ds.get(0);
+            System.out.println(ds.get(0));
+            d.execute(this);
 
-        d = ds.get(1);
-        d.execute(this);
-
+            d = ds.get(1);
+            d.execute(this);
+        }
     }
 
     private List<Decision> sortByPriority(List<Decision> ds){
